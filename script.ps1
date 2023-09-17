@@ -25,7 +25,6 @@ foreach($path in $paths){
 }
 
 # collect data and put in an email 
-
 function Randomise {    
     param (
         [array] $db
@@ -79,7 +78,7 @@ function Send-Email {
 
     $body = @"
     <h1>Nonna Alert: $date</h1>
-    <p>Hi Lou, Here's your agenda for today</p>
+    <p>Hi Lou, Here's your agenda for today. Remember that I am always watching over you. Have a great day!. Love Nonna</p>
     <h2>AZ-104 Revision</h2>
     <hr>
     <ul>
