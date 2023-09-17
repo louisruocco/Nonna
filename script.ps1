@@ -8,9 +8,13 @@ $paths = @(
     ".\db\other learning.txt"
 )
 
+Write-Host "Checking if db exists..."
+
 if(!(Test-Path $db)){
     Write-Host "Creating db directory..."
     New-Item -ItemType Directory -Path $db
+} else {
+    Write-host "DB Directory already exists"
 }
 
 write-Host "Creating db files..." 
