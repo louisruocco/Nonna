@@ -1,29 +1,24 @@
-Azure Import/Export | Export Jobs only allow data to be exported from Blob Storage
 Only zone redundant replication (ZRS) supports StorageV2, FileStorage, and BlockBlobStorage accounts and only standard storage accounts can be used
-File shares can be configured to use Azure AD Kerberos
 Before configuring object replication, you must enable blob versioning for both storage accounts, and you must enable the change feed for the source account.
 Live migration is only supported by accounts that have LRS or GRS replication
 Only General purpose v2 accounts support converting to ZRS
-Azure file sync can replicate files to different shares
-A sync group cannot have more than one cloud endpoint attached to it
 Immutability cannot be disabled after it has been enabled on the storage account
 Maximum number of fault domains = 3
 Maximum number of update domains = 20
-App Service Plans are created as per the Operating System type
-You can detach a disk from a running virtual machine
-Azure DNS provides automatic registration of VMs from a single virtual network that's linked to a private zone as a registration virtual network.
-If a VM is not in the registration vnet or private DNS zone, it cannot resolve/register DNS requests
-Azure Site to Site VPNs with HA need a minimum of 2 IP addresses
 VNet gateways need to be established to connect 2 VNets across different Subscriptions
-Azure resources connected to a VNet have outbound connectivity to the internet by default
 Azure NetworkWatcher is Regional
-The number of action groups required is determined by the number of users needed to be notified
 By default, backups of virtual machines are kept for 30 days.
-Configure the virtual machine scale set from the availability options
 AzCopy supports ONLY Blob and File Storage
-All data written to Azure Storage is encrypted through 256-bit advanced encryption standard (AES) encryption. AES is one of the strongest block ciphers available.
+All data written to Azure Storage is encrypted through 256-bit advanced encryption standard (AES) encryption.
 If you have data sources in multiple regions, create a Recovery Services vault for each region
 For a resource that requires the same schedule start time, frequency, and retention settings, you need to group them under a single backup policy.
 Azure resources connected to a VNet have outbound connectivity to the internet by default
-By default, all VMs in a Vnet can communicate with each other, regardless of what subnet they are in
 Azure Disk encryption (ADE) has 4 characteristics | DM-Crypt for Linux, backed up to a Recovery Services Vault, Integrated with Azure Key Vault, Uses Bitlocker for Windows VM disks
+A container in a storage account can have a maximum of 5 storage access policies
+StorageV2 and any Blob Storage account are the only accounts that support lifecycle management
+To manage outbound traffic from a Vnet using Azure firewall, a route tavle must be created
+Azure AD does not support inheritance of licenses for nested groups
+Azure Monitor Network Insights provides a comprehensive and visual representation through all Network topologies
+When moving a VM to a different subscription, ALL it's associated resources need to move with it
+Only Storage Accounts that use LRS, GRS or RA-GRS replication support moving Blobs to archive tier
+
