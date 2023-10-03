@@ -1,24 +1,32 @@
-Only zone redundant replication (ZRS) supports StorageV2, FileStorage, and BlockBlobStorage accounts and only standard storage accounts can be used
-Before configuring object replication, you must enable blob versioning for both storage accounts, and you must enable the change feed for the source account.
-Live migration is only supported by accounts that have LRS or GRS replication
-Only General purpose v2 accounts support converting to ZRS
-Immutability cannot be disabled after it has been enabled on the storage account
-Maximum number of fault domains = 3
-Maximum number of update domains = 20
-VNet gateways need to be established to connect 2 VNets across different Subscriptions
-Azure NetworkWatcher is Regional
-By default, backups of virtual machines are kept for 30 days.
-AzCopy supports ONLY Blob and File Storage
-All data written to Azure Storage is encrypted through 256-bit advanced encryption standard (AES) encryption.
-If you have data sources in multiple regions, create a Recovery Services vault for each region
-For a resource that requires the same schedule start time, frequency, and retention settings, you need to group them under a single backup policy.
-Azure resources connected to a VNet have outbound connectivity to the internet by default
-Azure Disk encryption (ADE) has 4 characteristics | DM-Crypt for Linux, backed up to a Recovery Services Vault, Integrated with Azure Key Vault, Uses Bitlocker for Windows VM disks
-A container in a storage account can have a maximum of 5 storage access policies
-StorageV2 and any Blob Storage account are the only accounts that support lifecycle management
-To manage outbound traffic from a Vnet using Azure firewall, a route tavle must be created
-Azure AD does not support inheritance of licenses for nested groups
-Azure Monitor Network Insights provides a comprehensive and visual representation through all Network topologies
-When moving a VM to a different subscription, ALL it's associated resources need to move with it
-Only Storage Accounts that use LRS, GRS or RA-GRS replication support moving Blobs to archive tier
-
+What Storage Accounts support Zone-redundant Storage?
+What needs to be done before configuring object replication?
+What replication types support live migration?
+What storage account type supports ZRS
+Can Azure File Sync Replicate files to different shares?
+Can a sync group have more than one Cloud endpoint attached to it?
+Can Immutability be disabled after being enabled on the storage account?
+Does Azure storage explorer support adding data?
+What storage account type is the only type where Premium file shares can be created?
+What needs to be used to transfer data greater than 30TB?
+What type of Storage Account supports Access tiers?
+What is the maximum number of Fault and Update Domains available?
+How are App Service Plans defined?
+Can VMs have more than one NIC?
+How can you share a virtual machine with an external user?
+What is Azure Spot Instance?
+What specs does the Standard App service Plan have?
+What is Mandatory when performing Backup and Recovery Services for a server?
+What is the main characteristic of Basic Load Balancer SKUs?
+What is the main characteristic of Standard Load Balancer SKUs?
+What do Site to Site VPNs with HA need?
+What is needed to connect 2 Vnets across Subscriptions?
+Can VMs speak to each other if they are in the same vNet? 
+Azure resources connected to a VNet have?
+What needs to be done to P2S clients after peering has been successfully established?
+Where do NS records need to be modified for internet requests to be routed through DNS?
+How do you know how many action groups you will need?
+How long are VM backups kept by default?
+What 2 storage account types does AzCopy Support?
+How often can Azure Monitor send emails and SMS messages?
+Does AzCopy support Windows, Linux and Mac OS?
+What is the only supported storage account that Lifecycle Management Supports?
