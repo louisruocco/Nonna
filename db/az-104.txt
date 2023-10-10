@@ -31,3 +31,5 @@ How often can Azure Monitor send emails and SMS messages?
 Does AzCopy support Windows, Linux and Mac OS?
 What is the only supported storage account that Lifecycle Management Supports?
 What is the first step when configuring Custom DNS for an Azure Web App?
+Does a Standard Load Balancer support resources with Basic public IPs?
+How do you determine how many backup policies you will need?
