@@ -5,22 +5,17 @@ What storage account type supports ZRS
 Can Azure File Sync Replicate files to different shares?
 Can a sync group have more than one Cloud endpoint attached to it?
 Can Immutability be disabled after being enabled on the storage account?
-Does Azure storage explorer support adding data?
 What storage account type is the only type where Premium file shares can be created?
-What needs to be used to transfer data greater than 30TB?
 What type of Storage Account supports Access tiers?
 What is the maximum number of Fault and Update Domains available?
 How are App Service Plans defined?
-Can VMs have more than one NIC?
 How can you share a virtual machine with an external user?
-What is Azure Spot Instance?
 What specs does the Standard App service Plan have?
 What is Mandatory when performing Backup and Recovery Services for a server?
 What is the main characteristic of Basic Load Balancer SKUs?
 What is the main characteristic of Standard Load Balancer SKUs?
 What do Site to Site VPNs with HA need?
 What is needed to connect 2 Vnets across Subscriptions?
-Can VMs speak to each other if they are in the same vNet? 
 Azure resources connected to a VNet have?
 What needs to be done to P2S clients after peering has been successfully established?
 Where do NS records need to be modified for internet requests to be routed through DNS?
@@ -33,3 +28,5 @@ What is the only supported storage account that Lifecycle Management Supports?
 What is the first step when configuring Custom DNS for an Azure Web App?
 Does a Standard Load Balancer support resources with Basic public IPs?
 How do you determine how many backup policies you will need?
+What is the only Storage type that supports encryption scopes?
+What's the first resource you should create when enabling MultiUser Authorization on a Recovery Services Vault?
