@@ -1,8 +1,6 @@
 What Storage Accounts support Zone-redundant Storage?
 What needs to be done before configuring object replication?
 What replication types support live migration?
-Can Azure File Sync Replicate files to different shares?
-Can a sync group have more than one Cloud endpoint attached to it?
 Can Immutability be disabled after being enabled on the storage account?
 What storage account type is the only type where Premium file shares can be created?
 What type of Storage Account supports Access tiers?
@@ -13,7 +11,6 @@ What specs does the Standard App service Plan have?
 What is Mandatory when performing Backup and Recovery Services for a server?
 What is the main characteristic of Basic Load Balancer SKUs?
 What is the main characteristic of Standard Load Balancer SKUs?
-What do Site to Site VPNs with HA need?
 What is needed to connect 2 Vnets across Subscriptions?
 Azure resources connected to a VNet have?
 What needs to be done to P2S clients after peering has been successfully established?
@@ -29,3 +26,5 @@ Does a Standard Load Balancer support resources with Basic public IPs?
 How do you determine how many backup policies you will need?
 What is the only Storage type that supports encryption scopes?
 What's the first resource you should create when enabling MultiUser Authorization on a Recovery Services Vault?
+What could cause a Backup Pre-Check to display a warning status?
+Can Azure Backup take backups of VMs regardless of whether the VM(s) is shutdown?
