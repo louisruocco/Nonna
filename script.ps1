@@ -40,8 +40,9 @@ function Pull-Data-From-DB {
     return $data
 }
 
-# Send email
 
+
+# Send email
 function Send-Email {
     $username = (Get-Content ".\db\creds.txt")[0]
     $password = (Get-Content ".\db\creds.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
@@ -51,7 +52,7 @@ function Send-Email {
     $miscLearning = Get-Content ".\db\other learning.txt"
     $az104 = Get-Content ".\db\az-104.txt"
 
-    $az104Notes = Randomise -db $az104[0..9]
+    $az104Notes = Randomise -db $az104[0..11]
     $mealPlanner = Randomise -db $meals
     $exercises = Randomise -db $gym
 

@@ -1,7 +1,6 @@
 What Storage Accounts support Zone-redundant Storage?
 What needs to be done before configuring object replication?
 What replication types support live migration?
-What storage account type supports ZRS
 Can Azure File Sync Replicate files to different shares?
 Can a sync group have more than one Cloud endpoint attached to it?
 Can Immutability be disabled after being enabled on the storage account?
