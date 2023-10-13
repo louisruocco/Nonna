@@ -28,3 +28,6 @@ What is the only Storage type that supports encryption scopes?
 What's the first resource you should create when enabling MultiUser Authorization on a Recovery Services Vault?
 What could cause a Backup Pre-Check to display a warning status?
 Can Azure Backup take backups of VMs regardless of whether the VM(s) is shutdown?
+What is the only OS that supports Azure Container Apps?
+What IP address type and SKU is required for Azure Firewall?
+How many service endpoints do you need if all the storage accounts are in the same region?
