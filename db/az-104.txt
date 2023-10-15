@@ -30,7 +30,6 @@ What IP address type and SKU is required for Azure Firewall?
 How many service endpoints do you need if all the storage accounts are in the same region?
 What is the only supported encryption key type used by Azure Storage?
 What is the maximum supported Bit Length of RSA?
-Can you apply tags to Management Groups?
 What dropdown is used to store sensitive information in ARM Templates?
 Do Group licenses support groups that contain other groups?
 What does a DNS TXT record do?
@@ -47,3 +46,4 @@ What can you use to perform a file recovery of an Azure VM in the event of ranso
 What location can you use to restore a backup of an Azure VM in the event of ransomware?
 What can you configure during the deployment of an ARM Template?
 Does .Net Core support Windows and Linux?
+What the three things you add tags to?
