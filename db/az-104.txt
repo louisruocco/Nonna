@@ -1,18 +1,15 @@
 What Storage Accounts support Zone-redundant Storage?
-What needs to be done before configuring object replication?
 What replication types support live migration?
 Can Immutability be disabled after being enabled on the storage account?
 What storage account type is the only type where Premium file shares can be created?
 What type of Storage Account supports Access tiers?
 What is the maximum number of Fault and Update Domains available?
-How are App Service Plans defined?
 How can you share a virtual machine with an external user?
 What specs does the Standard App service Plan have?
 What is Mandatory when performing Backup and Recovery Services for a server?
 What is the main characteristic of Basic Load Balancer SKUs?
 What is the main characteristic of Standard Load Balancer SKUs?
 What is needed to connect 2 Vnets across Subscriptions?
-Azure resources connected to a VNet have?
 What needs to be done to P2S clients after peering has been successfully established?
 Where do NS records need to be modified for internet requests to be routed through DNS?
 How do you know how many action groups you will need?
@@ -31,3 +28,9 @@ Can Azure Backup take backups of VMs regardless of whether the VM(s) is shutdown
 What is the only OS that supports Azure Container Apps?
 What IP address type and SKU is required for Azure Firewall?
 How many service endpoints do you need if all the storage accounts are in the same region?
+What is the only supported encryption key type used by Azure Storage?
+What is the maximum supported Bit Length of RSA?
+Can you apply tags to Management Groups?
+What dropdown is used to store sensitive information in ARM Templates?
+Do Group licenses support groups that contain other groups?
+What does a DNS TXT record do?
