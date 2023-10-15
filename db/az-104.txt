@@ -34,3 +34,16 @@ Can you apply tags to Management Groups?
 What dropdown is used to store sensitive information in ARM Templates?
 Do Group licenses support groups that contain other groups?
 What does a DNS TXT record do?
+Can you connect Azure Firewall to a VNet in another RG?
+Does Linux support Azure Container Instances, Azure Container Apps and App Services?
+What is the only supported encryption key type used by Azure Storage?
+What is the maximum supported Bit Length of RSA?
+What 2 options in Azure Cloud Shell should you select when creating a VM via ARM Templates?
+What Performance tier is necessary on a Storage Account to set it to be Block Blob?
+What needs to be deployed when using Service Manager in an on-prem environment to monitor VM memory?
+What users will be local admins on devices joined to a domain?
+Do Log Analytics Workspaces need to be in the same region as Recovery Services Vaults?
+What can you use to perform a file recovery of an Azure VM in the event of ransomware?
+What location can you use to restore a backup of an Azure VM in the event of ransomware?
+What can you configure during the deployment of an ARM Template?
+Does .Net Core support Windows and Linux?
