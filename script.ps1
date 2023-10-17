@@ -68,7 +68,7 @@ function Send-Email {
 
     $day = (Get-Date).DayOfWeek
     
-    if($day -eq "Sunday" -or $day -eq "Thursday"){
+    if($day -eq "Tuesday" -or $day -eq "Thursday"){
         $array = $exercises[0..7]
         $gymExercises = foreach($exercise in $array){
             "<li>$exercise</li>"
