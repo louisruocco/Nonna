@@ -2,10 +2,9 @@
 $db = ".\db"
 
 $paths = @(
-    ".\db\gym.txt", 
-    ".\db\meal-planner.txt", 
-    ".\db\az-104.txt", 
-    ".\db\other learning.txt"
+    "C:\Scripts\Nonna\db\gym.txt", 
+    "C:\Scripts\Nonna\db\meal-planner.txt", 
+    "C:\Scripts\Nonna\db\other learning.txt"
 )
 
 Write-Host "Checking if db exists..."
@@ -44,13 +43,12 @@ function Pull-Data-From-DB {
 
 # Send email
 function Send-Email {
-    $username = (Get-Content ".\db\creds.txt")[0]
-    $password = (Get-Content ".\db\creds.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
+    $username = (Get-Content "C:\Scripts\Nonna\db\creds.txt")[0]
+    $password = (Get-Content "C:\Scripts\Nonna\db\creds.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
     $date = Get-Date
-    $gym = Get-Content ".\db\gym.txt"
-    $meals = Get-Content ".\db\meal-planner.txt"
-    $miscLearning = Get-Content ".\db\other learning.txt"
-    $az104 = Get-Content ".\db\az-104.txt"
+    $gym = Get-Content "C:\Scripts\Nonna\db\gym.txt"
+    $meals = Get-Content "C:\Scripts\Nonna\db\meal-planner.txt"
+    $miscLearning = Get-Content "C:\Scripts\Nonna\db\other learning.txt"
 
     $az104Notes = Randomise -db $az104[0..11]
     $mealPlanner = Randomise -db $meals
@@ -80,11 +78,6 @@ function Send-Email {
     $body = @"
     <h1>Nonna Alert: $date</h1>
     <p>Hi Lou, Here's your agenda for today. Remember that I am always watching over you. Have a great day!. Love Nonna</p>
-    <h2>AZ-104 Revision</h2>
-    <hr>
-    <ul>
-        $notes
-    </ul>
     <h2>Today's Gym Session</h2>
     <hr>
     <ul>
