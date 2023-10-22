@@ -46,7 +46,7 @@ function Send-Email {
     $gym = Get-Content "C:\Scripts\Nonna\db\gym.txt"
     $meals = Get-Content "C:\Scripts\Nonna\db\meal-planner.txt"
     $miscLearning = Get-Content "C:\Scripts\Nonna\db\other learning.txt"
-    $date = Get-Date -Format "ddMMyyyy"
+    $date = Get-Date -Format "dd//MM//yyyy"
 
     $mealPlanner = Randomise -db $meals
     $exercises = Randomise -db $gym
@@ -68,8 +68,8 @@ function Send-Email {
 
     $body = @"
     <h1>Nonna Alert: $date</h1>
-    <p>Hi Lou, Here's your agenda for today. Remember that I am always watching over you. Have a great day!. Love Nonna</p>
-    <h2>Learning Topic of the Week>
+    <p>Hi Lou, Remember that I am always watching over you. Have a great day!. Love Nonna</p>
+    <h2>Learning Topic of the Week</h2>
     <ul>
         <li>$miscLearning</li>
     </ul>
