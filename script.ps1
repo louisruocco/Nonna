@@ -39,28 +39,19 @@ function Pull-Data-From-DB {
     return $data
 }
 
-
-
 # Send email
 function Send-Email {
     $username = (Get-Content "C:\Scripts\Nonna\db\creds.txt")[0]
     $password = (Get-Content "C:\Scripts\Nonna\db\creds.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
-    $date = Get-Date
     $gym = Get-Content "C:\Scripts\Nonna\db\gym.txt"
     $meals = Get-Content "C:\Scripts\Nonna\db\meal-planner.txt"
     $miscLearning = Get-Content "C:\Scripts\Nonna\db\other learning.txt"
+    $date = Get-Date -Format "ddMMyyyy"
 
-    $az104Notes = Randomise -db $az104[0..11]
     $mealPlanner = Randomise -db $meals
     $exercises = Randomise -db $gym
 
-    $notes = Pull-Data-From-DB -data $az104Notes
     $mealplan = Pull-Data-From-DB -data $mealPlanner
-
-    $notes = foreach($note in $notes){
-        "<li>$note</li>"
-    }
-
     $lunch = $mealplan[0]
     $dinner = $mealplan[1]
 
@@ -78,6 +69,10 @@ function Send-Email {
     $body = @"
     <h1>Nonna Alert: $date</h1>
     <p>Hi Lou, Here's your agenda for today. Remember that I am always watching over you. Have a great day!. Love Nonna</p>
+    <h2>Learning Topic of the Week>
+    <ul>
+        <li>$miscLearning</li>
+    </ul>
     <h2>Today's Gym Session</h2>
     <hr>
     <ul>
