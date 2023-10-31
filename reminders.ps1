@@ -6,8 +6,8 @@ function Send-Reminder {
     <h1>Nonna</h1>
     <p>Hi Lou, This is a reminder to update your meal plan, weekly project and weekly learning topic. You can find the file locations below:</p>
     <ul>
-        <li><b>Meal Plan<b> | E:\Code\Nonna\db\meal-planner.txt</li>
-        <li><b>Weekly Learning Topic<b> | E:\Code\Nonna\db\other learning.txt</li>
+        <li><b>Meal Plan</b> | E:\Code\Nonna\db\meal-planner.txt</li>
+        <li><b>Weekly Learning Topic</b> | E:\Code\Nonna\db\other learning.txt</li>
     </ul>
 "@
 
