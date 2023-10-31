@@ -1,6 +1,6 @@
 function Send-Reminder {
-    $username = (Get-Content "E:\Code\Nonna\db\creds.txt")[0]
-    $password = (Get-Content "E:\Code\Nonna\db\creds.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
+    $username = (Get-Content "C:\Scripts\Nonna\db\creds.txt")[0]
+    $password = (Get-Content "C:\Scripts\Nonna\db\creds.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
     
     $body = @"
     <h1>Nonna</h1>
