@@ -67,7 +67,7 @@ function Send-Email {
     }
 
     $body = @"
-    <h1>Nonna Alert: $date</h1>
+    <h1>Nonna</h1>
     <p>Hi Lou, Remember that I am always watching over you. Have a great day!. Love Nonna</p>
     <h2>Learning Topic of the Week</h2>
     <ul>
@@ -87,7 +87,7 @@ function Send-Email {
     $email = @{
         from = $username
         to = "louisruocco1@gmail.com"
-        subject = "Nonna Alert: $date"
+        subject = "Nonna"
         smtpserver = "smtp.gmail.com"
         body = $body
         port = 587
