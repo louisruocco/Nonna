@@ -46,7 +46,6 @@ function Send-Email {
     $gym = Get-Content "C:\Scripts\Nonna\db\gym.txt"
     $meals = Get-Content "C:\Scripts\Nonna\db\meal-planner.txt"
     $miscLearning = Get-Content "C:\Scripts\Nonna\db\other learning.txt"
-    $date = Get-Date -Format "dd//MM//yyyy"
 
     $mealPlanner = Randomise -db $meals
     $exercises = Randomise -db $gym

@@ -26,5 +26,4 @@ function Send-Reminder {
     Send-MailMessage @email -BodyAsHtml
 }
 
-
 Send-Reminder
