@@ -4,7 +4,7 @@ $db = ".\db"
 $paths = @(
     "C:\Scripts\Nonna\db\gym.txt", 
     "C:\Scripts\Nonna\db\meal-planner.txt", 
-    "C:\Scripts\Nonna\db\other learning.txt", 
+    "C:\Scripts\Nonna\db\other learning.txt"
 )
 
 Write-Host "Checking if db exists..."
@@ -25,7 +25,7 @@ foreach($path in $paths){
 }
 
 # Call Brent Ozar Blog Web Scraper script
-start-process "C:\Scripts\Nonna\script.ps1"
+powershell.exe -File "C:\Scripts\Nonna\scraper.ps1"
 
 # collect data and put in an email 
 function Randomise {    
