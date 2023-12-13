@@ -26,5 +26,11 @@ function Randomise {
     Check-Link -link $link -links $Links
 }
 
-DB-Check
-Randomise
+try {
+    Randomise
+    DB-Check
+}
+catch {
+    $date = Get-Date -Format "ddMMyyyy"
+    return $Error | Out-File -FilePath "<insert path to store logs here>errorlog_$date.txt"
+}
