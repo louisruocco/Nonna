@@ -4,7 +4,8 @@ $db = ".\db"
 $paths = @(
     "C:\Scripts\Nonna\db\gym.txt", 
     "C:\Scripts\Nonna\db\meal-planner.txt", 
-    "C:\Scripts\Nonna\db\other learning.txt"
+    "C:\Scripts\Nonna\db\other learning.txt", 
+    "C:\Scripts\Nonna\db\Brent Ozar Blog Links.txt"
 )
 
 Write-Host "Checking if db exists..."
@@ -16,12 +17,16 @@ if(!(Test-Path $db)){
     Write-host "DB Directory already exists"
 }
 
+
 foreach($path in $paths){
     if(!(Test-Path $path)){
         write-Host "Creating db files..." 
         New-Item -Path $path
     }
 }
+
+# Call Brent Ozar Blog Web Scraper script
+start-process "C:\Dump\Nonna\Nonna\script.ps1"
 
 # collect data and put in an email 
 function Randomise {    
@@ -46,6 +51,7 @@ function Send-Email {
     $gym = Get-Content "C:\Scripts\Nonna\db\gym.txt"
     $meals = Get-Content "C:\Scripts\Nonna\db\meal-planner.txt"
     $miscLearning = Get-Content "C:\Scripts\Nonna\db\other learning.txt"
+    $blogLink = Get-content "C:\Scripts\Nonna\db\Brent Ozar Blog Links.txt" | Select-Object -Last 1
 
     $mealPlanner = Randomise -db $meals
     $exercises = Randomise -db $gym
@@ -72,6 +78,8 @@ function Send-Email {
     <ul>
         <li>$miscLearning</li>
     </ul>
+    <h2>Today's Brent Ozar Blog:</h2>
+        <a href="$blogLink">$BlogLink</a>
     <h2>Today's Gym Session</h2>
     <hr>
     <ul>
