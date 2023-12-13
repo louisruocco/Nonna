@@ -5,7 +5,6 @@ $paths = @(
     "C:\Scripts\Nonna\db\gym.txt", 
     "C:\Scripts\Nonna\db\meal-planner.txt", 
     "C:\Scripts\Nonna\db\other learning.txt", 
-    "C:\Scripts\Nonna\db\Brent Ozar Blog Links.txt"
 )
 
 Write-Host "Checking if db exists..."
@@ -26,7 +25,7 @@ foreach($path in $paths){
 }
 
 # Call Brent Ozar Blog Web Scraper script
-start-process "C:\Dump\Nonna\Nonna\script.ps1"
+start-process "C:\Scripts\Nonna\script.ps1"
 
 # collect data and put in an email 
 function Randomise {    
