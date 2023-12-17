@@ -1,5 +1,6 @@
 # Check if each txt file exists
 $db = ".\db"
+$logs = ".\Logs"
 
 $paths = @(
     "C:\Scripts\Nonna\db\gym.txt", 
@@ -16,12 +17,18 @@ if(!(Test-Path $db)){
     Write-host "DB Directory already exists"
 }
 
-
 foreach($path in $paths){
     if(!(Test-Path $path)){
         write-Host "Creating db files..." 
         New-Item -Path $path
     }
+}
+
+if(!(Test-Path $logs)){
+    Write-Host "Creating Log repository..."
+    New-Item -ItemType Directory -Path $logs
+} else {
+    Write-Host "Log repository present"
 }
 
 # Call Brent Ozar Blog Web Scraper script
