@@ -3,9 +3,9 @@ $db = ".\db"
 $logs = ".\Logs"
 
 $paths = @(
-    "C:\Scripts\Nonna\db\gym.txt", 
-    "C:\Scripts\Nonna\db\meal-planner.txt", 
-    "C:\Scripts\Nonna\db\other learning.txt"
+    "C:\Louis\Scripts\Nonna\db\gym.txt", 
+    "C:\Louis\Scripts\Nonna\db\meal-planner.txt", 
+    "C:\Louis\Scripts\Nonna\db\other learning.txt"
 )
 
 Write-Host "Checking if db exists..."
@@ -32,7 +32,7 @@ if(!(Test-Path $logs)){
 }
 
 # Call Brent Ozar Blog Web Scraper script
-powershell.exe -File "C:\Scripts\Nonna\scraper.ps1"
+powershell.exe -File "C:\Louis\Scripts\Nonna\scraper.ps1"
 
 # collect data and put in an email 
 function Randomise {    
@@ -52,12 +52,12 @@ function Pull-Data-From-DB {
 
 # Send email
 function Send-Email {
-    $username = (Get-Content "C:\Scripts\Nonna\db\creds.txt")[0]
-    $password = (Get-Content "C:\Scripts\Nonna\db\creds.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
-    $gym = Get-Content "C:\Scripts\Nonna\db\gym.txt"
-    $meals = Get-Content "C:\Scripts\Nonna\db\meal-planner.txt"
-    $miscLearning = Get-Content "C:\Scripts\Nonna\db\other learning.txt"
-    $blogLink = Get-content "C:\Scripts\Nonna\db\Brent Ozar Blog Links.txt" | Select-Object -Last 1
+    $username = (Get-Content "C:\Louis\Scripts\Nonna\db\creds.txt")[0]
+    $password = (Get-Content "C:\Louis\Scripts\Nonna\db\creds.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
+    $gym = Get-Content "C:\Louis\Scripts\Nonna\db\gym.txt"
+    $meals = Get-Content "C:\Louis\Scripts\Nonna\db\meal-planner.txt"
+    $miscLearning = Get-Content "C:\Louis\Scripts\Nonna\db\other learning.txt"
+    $blogLink = Get-content "C:\Louis\Scripts\Nonna\db\Brent Ozar Blog Links.txt" | Select-Object -Last 1
 
     $mealPlanner = Randomise -db $meals
     $exercises = Randomise -db $gym
