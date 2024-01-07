@@ -31,6 +31,6 @@ try {
     DB-Check
 }
 catch {
-    $date = Get-Date -Format "ddMMyyyy"
-    return $Error | Out-File -FilePath "C:\Louis\Scripts\Nonna\Logs\errorlog_$date.txt"
+    Get-Date -Format "ddMMyyyy"
+    write-host $Error | Out-File -FilePath "C:\Louis\Scripts\Nonna\Logs\errorlog_$date.txt"
 }
