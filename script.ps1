@@ -34,6 +34,21 @@ if(!(Test-Path $logs)){
 # Call Brent Ozar Blog Web Scraper script
 # powershell.exe -File ".\scraper.ps1"
 
+$topic = Get-Content "C:\Louis\Scripts\Nonna\db\other learning.txt"
+$endpoint = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&q=$topic&key=AIzaSyBD7heoYLk2epcRlDzOUONLYhCpL8INtRM"
+$res = Invoke-RestMethod $endpoint
+$items = $res.items
+$learning = foreach($item in $items){
+    $titles = $item.snippet.title
+    $urls = $item.id.videoId
+    $table = @{ $titles = $urls }
+    foreach($thing in $table){
+        $keys = $thing.Keys
+        $values = $thing.Values
+        "$keys | <a href = 'https://www.youtube.com/watch?v=$values'>https://www.youtube.com/watch?v=$values</a>"
+    }
+}
+
 # collect data and put in an email function Randomise {
 Function Randomise { 
     param (
