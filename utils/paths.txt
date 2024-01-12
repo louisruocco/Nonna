@@ -1,2 +1,2 @@
-.\db
-.\Logs
+C:\Louis\Scripts\Nonna\db
+C:\Louis\Scripts\Nonna\Logs
