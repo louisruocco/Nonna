@@ -2,10 +2,12 @@
 $db = ".\db"
 $logs = ".\Logs"
 
+$remotePath = ".\db"
+
 $paths = @(
-    "C:\Louis\Scripts\Nonna\db\gym.txt", 
-    "C:\Louis\Scripts\Nonna\db\meal-planner.txt", 
-    "C:\Louis\Scripts\Nonna\db\other learning.txt"
+    "$remotePath\gym.txt", 
+    "$remotePath\meal-planner.txt", 
+    "$remotePath\other learning.txt"
 )
 
 Write-Host "Checking if db exists..."
@@ -34,8 +36,8 @@ if(!(Test-Path $logs)){
 # Call Brent Ozar Blog Web Scraper script
 # powershell.exe -File ".\scraper.ps1"
 
-$apiKey = Get-Content "C:\Louis\Scripts\Nonna\db\\secrets.txt"
-$topic = Get-Content "C:\Louis\Scripts\Nonna\db\other learning.txt"
+$apiKey = Get-Content "$remotePath\secrets.txt"
+$topic = Get-Content "$remotePath\other learning.txt"
 $endpoint = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&q=$topic&key=$apiKey"
 $res = Invoke-RestMethod $endpoint
 $items = $res.items
@@ -68,12 +70,13 @@ function Pull-Data-From-DB {
 
 # Send email
 function Send-Email {
-    $username = (Get-Content "C:\Louis\Scripts\Nonna\db\creds.txt")[0]
-    $password = (Get-Content "C:\Louis\Scripts\Nonna\db\creds.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
-    $gym = Get-Content "C:\Louis\Scripts\Nonna\db\gym.txt"
-    $meals = Get-Content "C:\Louis\Scripts\Nonna\db\meal-planner.txt"
-    $miscLearning = Get-Content "C:\Louis\Scripts\Nonna\db\other learning.txt"
-    # $blogLink = Get-content "C:\Louis\Scripts\Nonna\db\Brent Ozar Blog Links.txt" | Select-Object -Last 1
+    $username = (Get-Content "$remotePath\creds.txt")[0]
+    $password = (Get-Content "$remotePath\creds.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
+    $emailAddress = (Get-Content "$remotePath\creds.txt")[2]
+    $gym = Get-Content "$remotePath\gym.txt"
+    $meals = Get-Content "$remotePath\meal-planner.txt"
+    $miscLearning = Get-Content "$remotePath\other learning.txt"
+    # $blogLink = Get-content "$remotePath\Brent Ozar Blog Links.txt" | Select-Object -Last 1
 
     $mealPlanner = Randomise -db $meals
     $exercises = Randomise -db $gym
@@ -140,7 +143,7 @@ function Send-Email {
 
     $email = @{
         from = $username
-        to = "louisruocco1@gmail.com"
+        to = $emailAddress
         subject = "Nonna"
         smtpserver = "smtp.gmail.com"
         body = $body
