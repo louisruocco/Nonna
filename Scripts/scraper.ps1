@@ -3,7 +3,10 @@ $res = $url.ParsedHtml.getElementsByTagName('div') |Where-Object { $_.className 
 $links = $res | ForEach-Object { $_.getElementsByTagName('a') }
 $random = $links.href -replace '#comments', '' -replace 'https://www.brentozar.com/archive/author/brento/', '' -replace 'https://www.brentozar.com/archive/category/videos/', '' -replace 'https://www.brentozar.com/archive/category/development/t-sql/', '' | Select-Object -Unique
 
-$path = "C:\Louis\Scripts\Nonna\db\Brent Ozar Blog Links.txt"
+$db = (Get-Content ".\utils\paths.txt")[0]
+$logs = (Get-Content ".\utils\paths.txt")[1]
+
+$path = "$db\Brent Ozar Blog Links.txt"
 Function DB-Check {
     if(!(test-path $path)){
         New-Item $path
@@ -32,5 +35,5 @@ try {
 }
 catch {
     Get-Date -Format "ddMMyyyy"
-    write-host $Error | Out-File -FilePath "C:\Louis\Scripts\Nonna\Logs\errorlog_$date.txt"
+    write-host $Error | Out-File -FilePath "$logs\errorlog_$date.txt"
 }
