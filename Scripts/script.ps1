@@ -1,9 +1,6 @@
 $date = Get-Date -Format "ddMMyyyy"
-# Check if each txt file exists
-$db = ".\db"
-$logs = ".\Logs"
 
-$db = ".\db"
+$db = (Get-Content ".\utils\paths.txt")[0]
 
 $paths = @(
     "$db\gym.txt", 
@@ -71,9 +68,9 @@ function Pull-Data-From-DB {
 
 # Send email
 function Send-Email {
-    $username = (Get-Content "$db\creds.txt")[0]
-    $password = (Get-Content "$db\creds.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
-    $emailAddress = (Get-Content "$db\creds.txt")[2]
+    $username = (Get-Content "$db\secrets.txt")[0]
+    $password = (Get-Content "$db\secrets.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
+    $emailAddress = (Get-Content "$db\secrets.txt")[2]
     $gym = Get-Content "$db\gym.txt"
     $meals = Get-Content "$db\meal-planner.txt"
     $miscLearning = Get-Content "$db\other learning.txt"
