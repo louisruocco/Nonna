@@ -1,7 +1,7 @@
 $date = Get-Date -Format "yyyyMMdd"
 
-$db = (Get-Content ".\utils\paths.txt")[0]
-$logs = (Get-Content ".\utils\paths.txt")[1]
+$db = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[0]
+$logs = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[1]
 
 $paths = @(
     "$db\gym.txt", 
@@ -35,7 +35,7 @@ if(!(Test-Path $logs)){
 # Call Brent Ozar Blog Web Scraper script
 # powershell.exe -File ".\scraper.ps1"
 
-$apiKey = (Get-Content ".\utils\secrets.txt")[3]
+$apiKey = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[3]
 $topic = Get-Content "$db\other learning.txt"
 $endpoint = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&q=$topic&key=$apiKey"
 $res = Invoke-RestMethod $endpoint
@@ -69,9 +69,9 @@ function Pull-Data-From-DB {
 
 # Send email
 function Send-Email {
-    $username = (Get-Content ".\utils\secrets.txt")[0]
-    $password = (Get-Content ".\utils\secrets.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
-    $emailAddress = (Get-Content ".\utils\secrets.txt")[2]
+    $username = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[0]
+    $password = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
+    $emailAddress = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[2]
     $gym = Get-Content "$db\gym.txt"
     $meals = Get-Content "$db\meal-planner.txt"
     $miscLearning = Get-Content "$db\other learning.txt"
@@ -156,9 +156,9 @@ function Send-Email {
 }
 
 function Send-Error {
-    $username = (Get-Content ".\utils\secrets.txt")[0]
-    $password = (Get-Content ".\utils\secrets.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
-    $emailAddress = (Get-Content ".\utils\secrets.txt")[2]
+    $username = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[0]
+    $password = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
+    $emailAddress = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[2]
     $Error | Out-File "$logs\errorlog_$date.txt"
     $body = @"
     <h1>Nonna | Error Occurred</h1>
