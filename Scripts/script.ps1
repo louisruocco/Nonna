@@ -1,7 +1,7 @@
 $date = Get-Date -Format "yyyyMMdd"
 
-$db = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[0]
-$logs = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[1]
+$db = (Get-Content "C:\Louis\Scripts\Nonna\utils\paths.txt")[0]
+$logs = (Get-Content "C:\Louis\Scripts\Nonna\utils\paths.txt")[1]
 
 $paths = @(
     "$db\gym.txt", 
