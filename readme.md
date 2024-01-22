@@ -3,7 +3,9 @@
 A collection of Powershell scripts that act as PA, daily fitness schedule and study helper. An email is sent every morning with this information to help me get started and ready for the day ahead.
 
 ## Changelog:
-### v1.1 | The error-handling version update!
+### v1.11
+
+### v1.1
 - Added some error logging/handling internally as there was none present, making fixing errors difficult
 - More to come in this version update shortly! 
 

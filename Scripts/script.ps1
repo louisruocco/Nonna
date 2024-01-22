@@ -95,50 +95,31 @@ function Send-Email {
         $gymExercises = "<h3>No Gym Today<h3>"
     }
 
-    if($day -eq "Monday"){
-        $learningLinks = foreach ($item in $learning){
-            "<li>$item</li>"
-        }
-        $body = @"
-        <h1>Nonna</h1>
-        <p>Hi Lou, Remember that I am always watching over you. Have a great day!. Love Nonna</p>
-        <h2>Learning Topic of the Week</h2>
-        <ul>
-            <li>$miscLearning</li>
-        </ul>
-        <h2>This Week's Learning Resources:</h2>
-            <ul>
-                <li>$learningLinks</li>
-            </ul>
-        <h2>Today's Gym Session</h2>
-        <hr>
-        <ul>
-            $gymexercises
-        </ul>
-        <h2>Today's Meal Plan</h2>
-        <hr>
-        <h3>Lunch: $Lunch</h3>
-        <h3>Dinner: $dinner </h3>
-"@
-    } else {
-        $body = @"
-        <h1>Nonna</h1>
-        <p>Hi Lou, Remember that I am always watching over you. Have a great day!. Love Nonna</p>
-        <h2>Learning Topic of the Week</h2>
-        <ul>
-            <li>$miscLearning</li>
-        </ul>
-        <h2>Today's Gym Session</h2>
-        <hr>
-        <ul>
-            $gymexercises
-        </ul>
-        <h2>Today's Meal Plan</h2>
-        <hr>
-        <h3>Lunch: $Lunch</h3>
-        <h3>Dinner: $dinner </h3>
-"@
+    $learningLinks = foreach ($item in $learning){
+        "<li>$item</li>"
     }
+
+    $body = @"
+    <h1>Nonna</h1>
+    <p>Hi Lou, Remember that I am always watching over you. Have a great day!. Love Nonna</p>
+    <h2>Learning Topic of the Week</h2>
+    <ul>
+        <li>$miscLearning</li>
+    </ul>
+    <h2>This Week's Learning Resources:</h2>
+        <ul>
+            $learningLinks
+        </ul>
+    <h2>Today's Gym Session</h2>
+    <hr>
+    <ul>
+        $gymexercises
+    </ul>
+    <h2>Today's Meal Plan</h2>
+    <hr>
+    <h3>Lunch: $Lunch</h3>
+    <h3>Dinner: $dinner </h3>
+"@
 
     $email = @{
         from = $username
