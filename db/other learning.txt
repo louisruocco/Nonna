@@ -1,1 +1,1 @@
-SQL Buffer Page Life Expectancy
+SQL Server Buffer Page Life Expectancy
