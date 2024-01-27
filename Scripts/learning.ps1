@@ -25,14 +25,14 @@ function Send-Email {
     $username = (Get-Content "$utils\secrets.txt")[0]
     $password = (Get-Content "$utils\secrets.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
     $emailAddress = (Get-Content "$utils\secrets.txt")[2]
-    $learning = Get-Content "$db\other learning.txt"
+    $learningTopic = Get-Content "$db\other learning.txt"
     $learningLinks = foreach ($item in $learning){
         "<li>$item</li>"
     }
     $body = @"
-    <h1>Nonna | Learning Resources for $learning</h1>
+    <h1>Learning Resources for $learningTopic</h1>
     <p>Hi Lou. I have noticed you have updated the learning db with a new topic. Here are some resources I think you would find useful</p>
-    <h2>Learning Topic: $Learning</h2>
+    <h3>Videos on $learningTopic</h3>
     <ul>
         $learningLinks
     </ul>
