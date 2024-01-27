@@ -53,7 +53,7 @@ function Send-Email {
     Send-MailMessage @email -BodyAsHtml
 }
 
-$getFileWriteTime = (Get-ChildItem '$db\other learning.txt').LastWriteTime
+$getFileWriteTime = (Get-ChildItem "$db\other learning.txt").LastWriteTime
 
 $fileDateHour = $getFileWriteTime.Hour
 $fileDateMinute = $getFileWriteTime.Minute
