@@ -1,5 +1,8 @@
+$db = (Get-Content "C:\Louis\Scripts\Nonna\utils\paths.txt")[0]
+$utils = (Get-Content "C:\Louis\Scripts\Nonna\utils\paths.txt")[2]
+
 function Search-Learning {
-    $apiKey = (Get-Content ".\utils\secrets.txt")[3]
+    $apiKey = (Get-Content "$utils\secrets.txt")[3]
     $topic = Get-Content "$db\other learning.txt"
     $endpoint = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&q=$topic&key=$apiKey"
     $res = Invoke-RestMethod $endpoint
@@ -19,10 +22,10 @@ function Search-Learning {
 }
 
 function Send-Email {
-    $username = (Get-Content ".\utils\secrets.txt")[0]
-    $password = (Get-Content ".\utils\secrets.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
-    $emailAddress = (Get-Content ".\utils\secrets.txt")[2]
-    $learning = Get-Content ".\db\other learning.txt"
+    $username = (Get-Content "$utils\secrets.txt")[0]
+    $password = (Get-Content "$utils\secrets.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
+    $emailAddress = (Get-Content "$utils\secrets.txt")[2]
+    $learning = Get-Content "$db\other learning.txt"
     $learningLinks = foreach ($item in $learning){
         "<li>$item</li>"
     }
@@ -57,8 +60,6 @@ $fileDateMinute = $getFileWriteTime.Minute
 $currentDate = Get-Date -Format "yyyyMMddHHmm"
 $fileDate = $getFileWriteTime.ToString("yyyyMMddHHmm")
 $currentDate2 = $currentDate -1
-
-
 
 if(($fileDate -lt $currentDate) -or ($fileDate -lt $currentDate2)){
     write-output "email not sent"
