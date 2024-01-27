@@ -4,6 +4,10 @@ A collection of Powershell scripts that act as PA, daily fitness schedule and st
 
 ## Changelog:
 ### v1.11
+#### New Feature | Learning Worker Script:
+- The new "Learning" script will check for changes in the "other learning" txt file within 1 minute of it being pinged, if it detects any, it will ping the Youtube API with 5 new videos based on the updated value in that txt file"
+    - **Script must be set to run every minute in Task Scheduler for this feature to work as intended**
+#### Other Changes and Fixes in this Update:
 - Changed the default body to send youtube video links every day of the week instead of just Monday
 - Fixed issues with updating scripts on the backend
 

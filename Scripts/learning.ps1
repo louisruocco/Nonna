@@ -50,4 +50,18 @@ function Send-Email {
     Send-MailMessage @email -BodyAsHtml
 }
 
-Search-Learning
+$getFileWriteTime = (Get-ChildItem '.\db\other learning.txt').LastWriteTime
+
+$fileDateHour = $getFileWriteTime.Hour
+$fileDateMinute = $getFileWriteTime.Minute
+$currentDate = Get-Date -Format "yyyyMMddHHmm"
+$fileDate = $getFileWriteTime.ToString("yyyyMMddHHmm")
+$currentDate2 = $currentDate -1
+
+
+
+if(($fileDate -lt $currentDate) -or ($fileDate -lt $currentDate2)){
+    write-output "email not sent"
+} else {
+    Search-Learning
+}
