@@ -38,7 +38,7 @@ function Send-Email {
     $email = @{
         from = $username
         to = $emailAddress
-        subject = "Nonna"
+        subject = "Nonna | New Learning Resources based on: $learning"
         smtpserver = "smtp.gmail.com"
         body = $body
         port = 587
