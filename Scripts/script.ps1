@@ -75,8 +75,15 @@ function Send-Email {
     $gym = Get-Content "$db\gym.txt"
     $meals = Get-Content "$db\meal-planner.txt"
     $miscLearning = Get-Content "$db\other learning.txt"
+    $randomiser = Get-Content "$db\questions.txt"
     # $blogLink = Get-content "$db\Brent Ozar Blog Links.txt" | Select-Object -Last 1
 
+    $randomise = $randomiser | Sort-Object{Get-Random}
+    $questions = $randomise[0..11]
+    $results = foreach($question in $questions){
+        "<li>$question</li>"
+    }
+    
     $mealPlanner = Randomise -db $meals
     $exercises = Randomise -db $gym
 
@@ -102,6 +109,10 @@ function Send-Email {
     $body = @"
     <h1>Nonna</h1>
     <p>Hi Lou, Remember that I am always watching over you. Have a great day!. Love Nonna</p>
+    <h2>AZ-700 Revision</h2>
+    <ul>
+        $results    
+    </ul>
     <h2>Learning Topic of the Week</h2>
     <ul>
         <li>$miscLearning</li>

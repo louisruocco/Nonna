@@ -1,0 +1,11 @@
+What layer does Application Gateway Operate at?
+What is DDoS?
+What are the 2 primary routing methods of Application Gateway
+Does Application Gateway Support WAF?
+What is a WAF?
+What is NAT?
+What 2 resources do you need to deploy NAT?
+What are the 4 elements needed to create a VPN Gateway?
+What is the difference between a P2S and an S2S VPN connection?
+What are the 3 Protocols P2S VPN connections support?
+What are the 3 authentication methods of P2S VPN Connections?
