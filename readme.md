@@ -4,6 +4,11 @@ A collection of Powershell scripts that act as PA, daily fitness schedule and st
 
 ## Changelog:
 
+### v1.21
+#### New Feature | Study Randomiser
+Added the study randomiser back in to help me study for AZ-700
+This randomises questions in a new db and spits out the first 10 in the email body to help me with my active recall
+
 ### v1.2
 
 #### New Feature | Learning Worker Script:
@@ -16,7 +21,7 @@ A collection of Powershell scripts that act as PA, daily fitness schedule and st
 - Changed the default body to send youtube video links every day of the week instead of just Monday
 - Fixed issues with updating scripts on the backend
 
-### v1.1
+### v1.1git pull
 
 - Added some error logging/handling internally as there was none present, making fixing errors difficult
 - More to come in this version update shortly!
