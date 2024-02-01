@@ -9,3 +9,13 @@ What are the 4 elements needed to create a VPN Gateway?
 What is the difference between a P2S and an S2S VPN connection?
 What are the 3 Protocols P2S VPN connections support?
 What are the 3 authentication methods of P2S VPN Connections?
+What does Traffic Manager do?
+What is an endpoint?
+Is Endpoint Monitoring built-in to Traffic Manager?
+What are the 2 main benefits of using Traffic Manager?
+How does Traffic Manager work?
+What is a requirement for VPN Gateways?
+What does every VPN Gateway consist of?
+What are the 2 VPN Gateway types? Describe both of them and which one is limited to basic SKUs only
+What are the 2 most frequently used records in Azure DNS?
+What is a DNS zone?
