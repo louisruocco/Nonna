@@ -1,1 +1,2 @@
-Azure Next Hop
+GMSA vs Service Accounts
+
