@@ -3,7 +3,12 @@
 A collection of Powershell scripts that act as PA, daily fitness schedule and study helper. An email is sent every morning with this information to help me get started and ready for the day ahead.
 
 ## Changelog:
-### v1.11
+### v1.21
+#### New Feature | Study Randomiser
+- Added the study randomiser back in to help me study for AZ-700
+- This randomises questions in a new db and spits out the first 10 in the email body to help me with my active recall
+
+### v1.2
 #### New Feature | Learning Worker Script:
 - The new "Learning" script will check for changes in the "other learning" txt file within 1 minute of it being pinged, if it detects any, it will ping the Youtube API with 5 new videos based on the updated value in that txt file"
     - **Script must be set to run every minute in Task Scheduler for this feature to work as intended**
