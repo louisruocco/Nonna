@@ -4,10 +4,16 @@ A collection of Powershell scripts that act as PA, daily fitness schedule and st
 
 ## Changelog:
 
+### v1.3
+#### New Feature | Separate Study Randomiser Script:
+- Similar to the last release, however this logic has now been added as a separate script
+  - This is so that I can run this script at different times to keep up with revision, instead of it only running when Nonna sends the first email of the day
+
+
 ### v1.21
-#### New Feature | Study Randomiser
-Added the study randomiser back in to help me study for AZ-700
-This randomises questions in a new db and spits out the first 10 in the email body to help me with my active recall
+#### New Feature | Study Randomiser:
+- Added the study randomiser back in to help me study for AZ-700
+-  This randomises questions in a new db and spits out the first 10 in the email body to help me with my active recall
 
 ### v1.2
 
