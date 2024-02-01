@@ -27,7 +27,7 @@ A collection of Powershell scripts that act as PA, daily fitness schedule and st
 - Changed the default body to send youtube video links every day of the week instead of just Monday
 - Fixed issues with updating scripts on the backend
 
-### v1.1git pull
+### v1.1
 
 - Added some error logging/handling internally as there was none present, making fixing errors difficult
 - More to come in this version update shortly!
