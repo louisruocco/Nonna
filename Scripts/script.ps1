@@ -51,8 +51,7 @@ function Pull-Data-From-DB {
 
     return $data
 }
-
-function Decrypt-Credentials {
+function decryptCreds {
     param (
         [string]$path
     )
@@ -63,7 +62,7 @@ function Decrypt-Credentials {
     return $convert2
 }
 
-$apiKey = Decrypt-Credentials -path "$utils\apikey.txt"
+$apiKey = decryptCreds -path "$utils\apikey.txt"
 $topic = Get-Content "$db\other learning.txt"
 $endpoint = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&q=$topic&key=$apiKey"
 $res = Invoke-RestMethod $endpoint
@@ -78,13 +77,8 @@ $learning = foreach($item in $items){
         "$keys | <a href = 'https://www.youtube.com/watch?v=$values'>https://www.youtube.com/watch?v=$values</a>"
     }
 }
-
-
 # Send email
-function Send-Email {
-    $username = Decrypt-Credentials -path "$utils\username.txt"
-    $password = Decrypt-Credentials -path "$utils\password.txt" | ConvertTo-SecureString -AsPlainText -Force
-    $emailAddress = Decrypt-Credentials -path "$utils\emailaddress.txt"
+function Senc-Email {
     $gym = Get-Content "$db\gym.txt"
     $meals = Get-Content "$db\meal-planner.txt"
     $miscLearning = Get-Content "$db\other learning.txt"
@@ -160,35 +154,35 @@ function Send-Email {
     Send-MailMessage @email -BodyAsHtml
 }
 
-# function Send-Error {
-#     $username = Get-Content "$utils\username.txt"
-#     $password = (Get-Content "$utils\password.txt") | ConvertTo-SecureString -AsPlainText -Force
-#     $emailAddress = (Get-Content "$utils\emailaddress.txt")
-#     $Error | Out-File "$logs\errorlog_$date.txt"
-#     $body = @"
-#     <h1>Nonna | Error Occurred</h1>
-#     <p>Hi Lou, looks like an error occurred on my side. I'll log the error in $db\Logs\errorlog_$date.txt for you to review and fix. Sorry</p>
-# "@
+function Send-Error {
+    $username = Get-Content "$utils\username.txt"
+    $password = (Get-Content "$utils\password.txt") | ConvertTo-SecureString -AsPlainText -Force
+    $emailAddress = (Get-Content "$utils\emailaddress.txt")
+    $Error | Out-File "$logs\errorlog_$date.txt"
+    $body = @"
+    <h1>Nonna | Error Occurred</h1>
+    <p>Hi Lou, looks like an error occurred on my side. I'll log the error in $db\Logs\errorlog_$date.txt for you to review and fix. Sorry</p>
+"@
 
-#     $err = @{
-#         from = $username
-#         to = $emailAddress
-#         subject = "Nonna | Error Occured"
-#         smtpserver = "smtp.gmail.com"
-#         body = $body
-#         port = 587
-#         credential = New-Object System.Management.Automation.PSCredential -ArgumentList $username, $password
-#         usessl = $true
-#         verbose = $true
-#     }
+    $err = @{
+        from = $username
+        to = $emailAddress
+        subject = "Nonna | Error Occured"
+        smtpserver = "smtp.gmail.com"
+        body = $body
+        port = 587
+        credential = New-Object System.Management.Automation.PSCredential -ArgumentList $username, $password
+        usessl = $true
+        verbose = $true
+    }
 
-#     Send-MailMessage @err -BodyAsHtml
-# }
+    Send-MailMessage @err -BodyAsHtml
+}
 
-# try {
-#     Send-Email -ErrorAction Stop
-# } catch {
-#     Send-Error
-# }
+try {
+    Send-Email -ErrorAction Stop
+} catch {
+    Send-Error
+}
 
 Send-Email -ErrorAction Stop
