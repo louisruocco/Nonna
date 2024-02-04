@@ -51,7 +51,6 @@ function Pull-Data-From-DB {
 
     return $data
 }
-
 function decryptCreds {
     param (
         [string]$path
@@ -78,13 +77,7 @@ $learning = foreach($item in $items){
         "$keys | <a href = 'https://www.youtube.com/watch?v=$values'>https://www.youtube.com/watch?v=$values</a>"
     }
 }
-
-
 # Send email
-function Send-Email {
-    $username = decryptCreds -path "$utils\username.txt"
-    $password = decryptCreds -path "$utils\password.txt" | ConvertTo-SecureString -AsPlainText -Force
-    $emailAddress = decryptCreds -path "$utils\emailaddress.txt"
     $gym = Get-Content "$db\gym.txt"
     $meals = Get-Content "$db\meal-planner.txt"
     $miscLearning = Get-Content "$db\other learning.txt"
