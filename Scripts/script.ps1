@@ -36,6 +36,22 @@ if(!(Test-Path $logs)){
 # Call Brent Ozar Blog Web Scraper script
 # powershell.exe -File ".\scraper.ps1"
 
+$apiKey = Decrypt-Creds -path "$utils\apikey.txt"
+$topic = Get-Content "$db\other learning.txt"
+$endpoint = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&q=$topic&key=$apiKey"
+$res = Invoke-RestMethod $endpoint
+$items = $res.items
+$learning = foreach($item in $items){
+    $titles = $item.snippet.title
+    $urls = $item.id.videoId
+    $table = @{ $titles = $urls }
+    foreach($thing in $table){
+        $keys = $thing.Keys
+        $values = $thing.Values
+        "$keys | <a href = 'https://www.youtube.com/watch?v=$values'>https://www.youtube.com/watch?v=$values</a>"
+    }
+}
+
 # collect data and put in an email function Randomise {
 Function Randomise { 
     param (
@@ -52,7 +68,7 @@ function Pull-Data-From-DB {
     return $data
 }
 
-function Decrypt-Credentials {
+function Decrypt-Creds {
     param (
         [string]$path
     )
@@ -63,28 +79,11 @@ function Decrypt-Credentials {
     return $convert2
 }
 
-$apiKey = Decrypt-Credentials -path "$utils\apikey.txt"
-$topic = Get-Content "$db\other learning.txt"
-$endpoint = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&q=$topic&key=$apiKey"
-$res = Invoke-RestMethod $endpoint
-$items = $res.items
-$learning = foreach($item in $items){
-    $titles = $item.snippet.title
-    $urls = $item.id.videoId
-    $table = @{ $titles = $urls }
-    foreach($thing in $table){
-        $keys = $thing.Keys
-        $values = $thing.Values
-        "$keys | <a href = 'https://www.youtube.com/watch?v=$values'>https://www.youtube.com/watch?v=$values</a>"
-    }
-}
-
-
 # Send email
 function Send-Email {
-    $username = Decrypt-Credentials -path "$utils\username.txt"
-    $password = Decrypt-Credentials -path "$utils\password.txt" | ConvertTo-SecureString -AsPlainText -Force
-    $emailAddress = Decrypt-Credentials -path "$utils\emailaddress.txt"
+    $username = Decrypt-Creds -path "$utils\username.txt"
+    $password = Decrypt-Creds -path "$utils\password.txt" | ConvertTo-SecureString -AsPlainText -Force
+    $emailAddress = Decrypt-Creds -path "$utils\emailaddress.txt"
     $gym = Get-Content "$db\gym.txt"
     $meals = Get-Content "$db\meal-planner.txt"
     $miscLearning = Get-Content "$db\other learning.txt"
