@@ -19,3 +19,7 @@ What does every VPN Gateway consist of?
 What are the 2 VPN Gateway types? Describe both of them and which one is limited to basic SKUs only
 What are the 2 most frequently used records in Azure DNS?
 What is a DNS zone?
+Can resources without a Public IP communicate using NAT Services?
+What needs to be turned off to emable Service Endpoints?
+
+
