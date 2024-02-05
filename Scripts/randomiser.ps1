@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 $db = (Get-Content "C:\Louis\Scripts\Nonna\utils\paths.txt")[0]
 $logs = (Get-Content "C:\Louis\Scripts\Nonna\utils\paths.txt")[1]
 
-=======
->>>>>>> v1.3
 function Send-Email {
     $username = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[0]
     $password = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
