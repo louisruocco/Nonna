@@ -1,5 +1,4 @@
 $db = (Get-Content "C:\Louis\Scripts\Nonna\utils\paths.txt")[0]
-$logs = (Get-Content "C:\Louis\Scripts\Nonna\utils\paths.txt")[1]
 
 function Send-Email {
     $username = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[0]
