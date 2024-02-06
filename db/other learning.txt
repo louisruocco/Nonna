@@ -1,2 +1,2 @@
-GMSA vs Service Accounts
+Azure Traffic Manager
 
