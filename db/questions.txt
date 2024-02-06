@@ -20,6 +20,4 @@ What are the 2 VPN Gateway types? Describe both of them and which one is limited
 What are the 2 most frequently used records in Azure DNS?
 What is a DNS zone?
 Can resources without a Public IP communicate using NAT Services?
-What needs to be turned off to emable Service Endpoints?
-
-
+What needs to be turned off to enable Service Endpoints?
