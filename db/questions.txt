@@ -1,4 +1,3 @@
-What layer does Application Gateway Operate at?
 What is DDoS?
 What are the 2 primary routing methods of Application Gateway
 Does Application Gateway Support WAF?
@@ -21,3 +20,10 @@ What are the 2 most frequently used records in Azure DNS?
 What is a DNS zone?
 Can resources without a Public IP communicate using NAT Services?
 What needs to be turned off to enable Service Endpoints?
+What is the only resourrce that is compatible with route tables?
+What do Service endpoint policies do?
+What is the only resource that is compatible with Service Endpoint Policies?
+What is Bidirectional Forwarding Detection?
+What is the minimum address space for a virtual hub?
+What is global redirection used for?
+Do Private Endpoints need to be in the same region as the VNet?
