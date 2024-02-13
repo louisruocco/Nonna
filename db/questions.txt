@@ -27,3 +27,8 @@ What is Bidirectional Forwarding Detection?
 What is the minimum address space for a virtual hub?
 What is global redirection used for?
 Do Private Endpoints need to be in the same region as the VNet?
+How many VNets can to a single Private DNS Zone for registration?
+What are the 4 key components of Network Insights?
+What is Network Watcher?
+What are NSG Flow Logs?
+What does Traffic Analytics do?
