@@ -32,3 +32,5 @@ What are the 4 key components of Network Insights?
 What is Network Watcher?
 What are NSG Flow Logs?
 What does Traffic Analytics do?
+What are the 4 resources required to deploy Azure Firewall?
+What are the 3 attacks Azure DDoS protects against?
