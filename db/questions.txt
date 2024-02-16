@@ -34,3 +34,7 @@ What are NSG Flow Logs?
 What does Traffic Analytics do?
 What are the 4 resources required to deploy Azure Firewall?
 What are the 3 attacks Azure DDoS protects against?
+Can Azure DNS resolvre across different VNets?
+What is Public DNS?
+What is Private DNS?
+What does Automatic Registration do?
