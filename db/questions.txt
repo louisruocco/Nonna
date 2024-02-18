@@ -38,3 +38,4 @@ Can Azure DNS resolvre across different VNets?
 What is Public DNS?
 What is Private DNS?
 What does Automatic Registration do?
+What's the difference between A and AAAA Records?
