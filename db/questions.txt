@@ -46,3 +46,7 @@ What are the 2 Load Balancer types that work on a global scale?
 What are the 2 Load Balancer types that work on a regional scale?
 Which 2 load balancer types are HTTPS-based?
 Which 2 load balancer types are non-HTTPS-based?
+What is the cheaper option when selecting DDoS Protection?
+What is the only protocol that supports Azure AD authentication?
+What is the only protocol that supports RADIUS Server Authentication?
+What can be used to create a visual diagram of VNet Resources?
