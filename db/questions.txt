@@ -10,7 +10,7 @@ What are the 3 Protocols P2S VPN connections support?
 What are the 3 authentication methods of P2S VPN Connections?
 What does Traffic Manager do?
 What is an endpoint?
-Is Endpoint Monitoring built-in to Traffic Manager?
+Is Endpoint Monitoring builtin to Traffic Manager?
 What are the 2 main benefits of using Traffic Manager?
 How does Traffic Manager work?
 What is a requirement for VPN Gateways?
@@ -39,3 +39,10 @@ What is Public DNS?
 What is Private DNS?
 What does Automatic Registration do?
 What's the difference between A and AAAA Records?
+What is Azure Front Door?
+How does Front Door speed up request processing?
+What is the most common use case of Front Door Redirection?
+What are the 2 Load Balancer types that work on a global scale?
+What are the 2 Load Balancer types that work on a regional scale?
+Which 2 load balancer types are HTTPS-based?
+Which 2 load balancer types are non-HTTPS-based?
