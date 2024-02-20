@@ -46,5 +46,12 @@ What are the 2 Load Balancer types that work on a global scale?
 What are the 2 Load Balancer types that work on a regional scale?
 Which 2 load balancer types are HTTPS-based?
 Which 2 load balancer types are non-HTTPS-based?
+<<<<<<< HEAD
 What does Connection Monitor do?
 What are the 2 data types that Azure Monitor stores?
+=======
+What is the cheaper option when selecting DDoS Protection?
+What is the only protocol that supports Azure AD authentication?
+What is the only protocol that supports RADIUS Server Authentication?
+What can be used to create a visual diagram of VNet Resources?
+>>>>>>> 1a4efea3c4af4c83b2e2508b47f5f0af9d2965ba
