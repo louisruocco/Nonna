@@ -46,3 +46,5 @@ What are the 2 Load Balancer types that work on a global scale?
 What are the 2 Load Balancer types that work on a regional scale?
 Which 2 load balancer types are HTTPS-based?
 Which 2 load balancer types are non-HTTPS-based?
+What does Connection Monitor do?
+What are the 2 data types that Azure Monitor stores?
