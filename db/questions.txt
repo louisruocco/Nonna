@@ -60,3 +60,8 @@ What are the 2 types of Virtual WAN?
 What are NVAs?
 What is the only feature that the basic SKU offers?
 What do virtual WANs allow organisations to use?
+What is a service key used for?
+What are the 4 ways to connect to ExpressRoute?
+What is Bidirectional Forwarding Detection?
+What is ExpressRoute FastPath?
+What are Route Filters?
