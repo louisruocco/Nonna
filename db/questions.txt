@@ -38,7 +38,6 @@ Can Azure DNS resolvre across different VNets?
 What is Public DNS?
 What is Private DNS?
 What does Automatic Registration do?
-What's the difference between A and AAAA Records?
 What is Azure Front Door?
 How does Front Door speed up request processing?
 What is the most common use case of Front Door Redirection?
@@ -65,3 +64,13 @@ What are the 4 ways to connect to ExpressRoute?
 What is Bidirectional Forwarding Detection?
 What is ExpressRoute FastPath?
 What are Route Filters?
+What is the rule processing sequence of Azure Firewall?
+What are the 3 attack types that DDoS Protection protects from?
+What are the 2 main tiers of DDoS Protection?
+Can NICs assigned to an ASG belong to different VNets?
+What is required to deploy an Azure Firewall?
+What are the 6 Routing methods that Traffic Manager supports?
+What are the 4 certificate types Application Gateway supports for TLS termination?
+What are the 4 redirection types that Application Gateway supports? 
+What are the 2 Listener types associated with Application Gateway and what do they both do?
+What is Global Redirection?
