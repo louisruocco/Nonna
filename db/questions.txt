@@ -60,7 +60,7 @@ What are NVAs?
 What is the only feature that the basic SKU offers?
 What do virtual WANs allow organisations to use?
 What is a service key used for?
-What are the 4 ways to connect to ExpressRoute?
+What are the 4 ways to connect to ExpressRoute? Describe each one
 What is Bidirectional Forwarding Detection?
 What is ExpressRoute FastPath?
 What are Route Filters?
@@ -74,3 +74,4 @@ What are the 4 certificate types Application Gateway supports for TLS terminatio
 What are the 4 redirection types that Application Gateway supports? 
 What are the 2 Listener types associated with Application Gateway and what do they both do?
 What is Global Redirection?
+What needs to be enabled in Bidirectional Forwarding detection for quicker link failure detection?
