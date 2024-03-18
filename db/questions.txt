@@ -78,3 +78,6 @@ What needs to be enabled in Bidirectional Forwarding detection for quicker link 
 What are the 2 peering locations in ExpressRoute?
 What are the 3 ExpressRoute SKUs?
 How can ExpressRoute be encrypted?
+What are the 2 benefits of using Traffic Manager?
+What are the 2 benefits of using Traffic Manager?
+What can you specify with Nested Traffic Manager profiles?
