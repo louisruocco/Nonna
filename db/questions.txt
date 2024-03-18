@@ -75,3 +75,6 @@ What are the 4 redirection types that Application Gateway supports?
 What are the 2 Listener types associated with Application Gateway and what do they both do?
 What is Global Redirection?
 What needs to be enabled in Bidirectional Forwarding detection for quicker link failure detection?
+What are the 2 peering locations in ExpressRoute?
+What are the 3 ExpressRoute SKUs?
+How can ExpressRoute be encrypted?
