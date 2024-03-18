@@ -81,3 +81,4 @@ How can ExpressRoute be encrypted?
 What are the 2 benefits of using Traffic Manager?
 What are the 2 benefits of using Traffic Manager?
 What can you specify with Nested Traffic Manager profiles?
+What can DDoS Protection be paired with to enhance it's protection across multiple network layers?
