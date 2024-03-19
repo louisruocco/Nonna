@@ -67,6 +67,12 @@ function Pull-Data-From-DB {
     return $data
 }
 
+function Pull-Questions-On-Learning-Topic {
+    $miscLearning = Get-Content "E:\Code\Nonna\db\other learning.txt"
+    $search = Select-String -Path "E:\Code\Nonna\db\questions.txt" -Pattern $miscLearning
+    $search.Line
+}
+
 # Send email
 function Send-Email {
     $username = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[0]
@@ -74,7 +80,6 @@ function Send-Email {
     $emailAddress = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[2]
     $gym = Get-Content "$db\gym.txt"
     $meals = Get-Content "$db\meal-planner.txt"
-    $miscLearning = Get-Content "$db\other learning.txt"
     $randomiser = Get-Content "$db\questions.txt"
     # $blogLink = Get-content "$db\Brent Ozar Blog Links.txt" | Select-Object -Last 1
 
@@ -120,6 +125,10 @@ function Send-Email {
     <h2>This Week's Learning Resources:</h2>
         <ul>
             $learningLinks
+        </ul>
+    <h3>AZ-700 Questions related to $miscLearning</h3>
+        <ul>
+            $questions
         </ul>
     <h2>Today's Gym Session</h2>
     <hr>

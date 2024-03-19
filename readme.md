@@ -4,6 +4,11 @@ A collection of Powershell scripts that act as PA, daily fitness schedule and st
 
 ## Changelog:
 
+### v.1.31
+#### New Feature | New function added to pull out AZ-700 questions based on the current Learning Topic:
+- A minor feature added to help me study for AZ-700 by pulling out the specific custom quesitons I have devised myself from the 'questions.txt' file
+  - Results are now appended to the email body
+
 ### v1.3
 #### New Feature | Separate Study Randomiser Script:
 - Similar to the last release, however this logic has now been added as a separate script
@@ -16,7 +21,6 @@ A collection of Powershell scripts that act as PA, daily fitness schedule and st
 -  This randomises questions in a new db and spits out the first 10 in the email body to help me with my active recall
 
 ### v1.2
-
 #### New Feature | Learning Worker Script:
 
 - The new "Learning" script will check for changes in the "other learning" txt file within 1 minute of it being pinged, if it detects any, it will ping the Youtube API with 5 new videos based on the updated value in that txt file"

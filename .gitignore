@@ -4,3 +4,4 @@ Logs
 Brent Ozar Blog Links.txt
 secrets.txt
 creds.txt
+*.tfstate
