@@ -68,8 +68,8 @@ function Pull-Data-From-DB {
 }
 
 function Pull-Questions-On-Learning-Topic {
-    $miscLearning = Get-Content "E:\Code\Nonna\db\other learning.txt"
-    $search = Select-String -Path "E:\Code\Nonna\db\questions.txt" -Pattern $miscLearning
+    $miscLearning = Get-Content "$db\other learning.txt"
+    $search = Select-String -Path "$db\questions.txt" -Pattern $miscLearning
     $search.Line
 }
 
