@@ -78,6 +78,7 @@ function Send-Email {
     $username = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[0]
     $password = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[1] | ConvertTo-SecureString -AsPlainText -Force
     $emailAddress = (Get-Content "C:\Louis\Scripts\Nonna\utils\secrets.txt")[2]
+    $miscLearning = Get-Content "$db\other learning.txt"
     $gym = Get-Content "$db\gym.txt"
     $meals = Get-Content "$db\meal-planner.txt"
     $randomiser = Get-Content "$db\questions.txt"
