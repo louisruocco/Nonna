@@ -96,6 +96,11 @@ function Send-Email {
     $lunch = $mealplan[0]
     $dinner = $mealplan[1]
 
+    $learningTopicQuestions = Pull-Questions-On-Learning-Topic
+    $topicQuestions = foreach($result in $learningTopicQuestions){
+        "<li>$result</li>"
+    }
+
     $day = (Get-Date).DayOfWeek
 
     if($day -eq "Tuesday" -or $day -eq "Thursday"){
@@ -116,7 +121,7 @@ function Send-Email {
     <p>Hi Lou, Remember that I am always watching over you. Have a great day!. Love Nonna</p>
     <h2>AZ-700 Revision</h2>
     <ul>
-    $questions   
+        $results   
     </ul>
     <h2>Learning Topic of the Week</h2>
     <ul>
@@ -128,7 +133,7 @@ function Send-Email {
         </ul>
     <h3>AZ-700 Questions related to $miscLearning</h3>
         <ul>
-            $results
+            $topicQuestions
         </ul>
     <h2>Today's Gym Session</h2>
     <hr>
