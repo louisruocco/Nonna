@@ -116,7 +116,7 @@ function Send-Email {
     <p>Hi Lou, Remember that I am always watching over you. Have a great day!. Love Nonna</p>
     <h2>AZ-700 Revision</h2>
     <ul>
-        $results    
+    $questions   
     </ul>
     <h2>Learning Topic of the Week</h2>
     <ul>
