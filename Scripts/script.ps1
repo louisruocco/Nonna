@@ -128,7 +128,7 @@ function Send-Email {
         </ul>
     <h3>AZ-700 Questions related to $miscLearning</h3>
         <ul>
-            $questions
+            $results
         </ul>
     <h2>Today's Gym Session</h2>
     <hr>
