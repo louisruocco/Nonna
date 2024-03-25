@@ -83,3 +83,6 @@ What are the 2 benefits of using Traffic Manager?
 What can you specify with Nested Traffic Manager profiles?
 What can DDoS Protection be paired with to enhance it's protection across multiple network layers?
 What are the 3 endpoints that Traffic Manager supports?
+What subnet mask must an IPv6 Subnet have?
+What are Inbound NAT Rules used for?
+What are Service Endpoint Service Tags used for?
