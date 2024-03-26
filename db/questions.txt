@@ -86,3 +86,4 @@ What are the 3 endpoints that Traffic Manager supports?
 What subnet mask must an IPv6 Subnet have?
 What are Inbound NAT Rules used for?
 What are Service Endpoint Service Tags used for?
+What does Private Endpoint do?
