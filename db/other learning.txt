@@ -1,1 +1,1 @@
-NAT
+Azure DNS
