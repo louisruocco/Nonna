@@ -87,4 +87,5 @@ What subnet mask must an IPv6 Subnet have?
 What are Inbound NAT Rules used for?
 What are Service Endpoint Service Tags used for?
 What does Private Endpoint do?
-What IP Address does Azure DNS use for all VNets and Services?
+What does Azure Network Adapter not require in order to connect to a Virtual Network?
+What is a potential challenge when using Azure Extended Network?
