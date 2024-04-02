@@ -89,3 +89,7 @@ What are Service Endpoint Service Tags used for?
 What does Private Endpoint do?
 What does Azure Network Adapter not require in order to connect to a Virtual Network?
 What is a potential challenge when using Azure Extended Network?
+What are Network Policies?
+What are the only 2 Load Balancers that support Availability Zones?
+What are Inbound NAT Rules used for?
+What do custom Application Gateway policies allow you to choose?
