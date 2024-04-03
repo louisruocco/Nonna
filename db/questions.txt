@@ -93,3 +93,6 @@ What are Network Policies?
 What are the only 2 Load Balancers that support Availability Zones?
 What are Inbound NAT Rules used for?
 What do custom Application Gateway policies allow you to choose?
+What is needed to deploy Azure Extended Network?
+What are Basic Virtual WAN SKUs limited to?
+What ExpressRoute Connection Method provides High availability and redundancy?
