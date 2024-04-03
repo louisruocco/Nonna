@@ -96,3 +96,4 @@ What do custom Application Gateway policies allow you to choose?
 What is needed to deploy Azure Extended Network?
 What are Basic Virtual WAN SKUs limited to?
 What ExpressRoute Connection Method provides High availability and redundancy?
+If there are 5 subscriptions that want to use ExpressRoute, How many circuits do you need?
