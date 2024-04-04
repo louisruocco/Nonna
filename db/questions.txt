@@ -79,7 +79,6 @@ What are the 2 peering locations in ExpressRoute?
 What are the 3 ExpressRoute SKUs?
 How can ExpressRoute be encrypted?
 What are the 2 benefits of using Traffic Manager?
-What are the 2 benefits of using Traffic Manager?
 What can you specify with Nested Traffic Manager profiles?
 What can DDoS Protection be paired with to enhance it's protection across multiple network layers?
 What are the 3 endpoints that Traffic Manager supports?
@@ -97,3 +96,7 @@ What is needed to deploy Azure Extended Network?
 What are Basic Virtual WAN SKUs limited to?
 What ExpressRoute Connection Method provides High availability and redundancy?
 If there are 5 subscriptions that want to use ExpressRoute, How many circuits do you need?
+What enables transitive connectivity between Azure VNets?
+What do User Defined Routes do?
+What 3 things define an ExpressRoute Circuit?
+Does Traffic Manager provide Url-Based Routing?
