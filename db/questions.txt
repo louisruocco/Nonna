@@ -1,45 +1,28 @@
-What is DDoS?
 What are the 2 primary routing methods of Application Gateway
-Does Application Gateway Support WAF?
-What is a WAF?
 What is NAT?
 What 2 resources do you need to deploy NAT?
 What are the 4 elements needed to create a VPN Gateway?
-What is the difference between a P2S and an S2S VPN connection?
 What are the 3 Protocols P2S VPN connections support?
 What are the 3 authentication methods of P2S VPN Connections?
-What does Traffic Manager do?
-What is an endpoint?
 Is Endpoint Monitoring builtin to Traffic Manager?
 What are the 2 main benefits of using Traffic Manager?
-How does Traffic Manager work?
 What is a requirement for VPN Gateways?
 What does every VPN Gateway consist of?
 What are the 2 VPN Gateway types? Describe both of them and which one is limited to basic SKUs only
-What are the 2 most frequently used records in Azure DNS?
-What is a DNS zone?
 Can resources without a Public IP communicate using NAT Services?
 What needs to be turned off to enable Service Endpoints?
-What is the only resourrce that is compatible with route tables?
+What is the only resource that is compatible with route tables?
 What do Service endpoint policies do?
-What is the only resource that is compatible with Service Endpoint Policies?
 What is Bidirectional Forwarding Detection?
 What is the minimum address space for a virtual hub?
-What is global redirection used for?
 Do Private Endpoints need to be in the same region as the VNet?
-How many VNets can to a single Private DNS Zone for registration?
 What are the 4 key components of Network Insights?
 What is Network Watcher?
-What are NSG Flow Logs?
 What does Traffic Analytics do?
 What are the 4 resources required to deploy Azure Firewall?
 What are the 3 attacks Azure DDoS protects against?
-Can Azure DNS resolvre across different VNets?
-What is Public DNS?
-What is Private DNS?
-What does Automatic Registration do?
+Can Azure DNS resolve across different VNets?
 What is Azure Front Door?
-How does Front Door speed up request processing?
 What is the most common use case of Front Door Redirection?
 What are the 2 Load Balancer types that work on a global scale?
 What are the 2 Load Balancer types that work on a regional scale?
@@ -47,7 +30,6 @@ Which 2 load balancer types are HTTPS-based?
 Which 2 load balancer types are non-HTTPS-based?
 What does Connection Monitor do?
 What are the 2 data types that Azure Monitor stores?
-What is the cheaper option when selecting DDoS Protection?
 What is the only protocol that supports Azure AD authentication?
 What is the only protocol that supports RADIUS Server Authentication?
 What can be used to create a visual diagram of VNet Resources?
@@ -71,14 +53,11 @@ Can NICs assigned to an ASG belong to different VNets?
 What is required to deploy an Azure Firewall?
 What are the 6 Routing methods that Traffic Manager supports?
 What are the 4 certificate types Application Gateway supports for TLS termination?
-What are the 4 redirection types that Application Gateway supports? 
 What are the 2 Listener types associated with Application Gateway and what do they both do?
-What is Global Redirection?
-What needs to be enabled in Bidirectional Forwarding detection for quicker link failure detection?
-What are the 2 peering locations in ExpressRoute?
+What is Application Gateway Global Redirection?
+What are the 2 peering options in ExpressRoute?
 What are the 3 ExpressRoute SKUs?
 How can ExpressRoute be encrypted?
-What are the 2 benefits of using Traffic Manager?
 What can you specify with Nested Traffic Manager profiles?
 What can DDoS Protection be paired with to enhance it's protection across multiple network layers?
 What are the 3 endpoints that Traffic Manager supports?
@@ -90,7 +69,6 @@ What does Azure Network Adapter not require in order to connect to a Virtual Net
 What is a potential challenge when using Azure Extended Network?
 What are Network Policies?
 What are the only 2 Load Balancers that support Availability Zones?
-What are Inbound NAT Rules used for?
 What do custom Application Gateway policies allow you to choose?
 What is needed to deploy Azure Extended Network?
 What are Basic Virtual WAN SKUs limited to?
