@@ -79,3 +79,4 @@ What do User Defined Routes do?
 What 3 things define an ExpressRoute Circuit?
 Does Traffic Manager provide Url-Based Routing?
 Does Private Endpoint need to be deployed in the same region and subscription as the VNet?
+What 2 components are required to create an ExpressRoute Connection?
