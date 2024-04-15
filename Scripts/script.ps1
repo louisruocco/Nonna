@@ -85,7 +85,7 @@ function Send-Email {
     # $blogLink = Get-content "$db\Brent Ozar Blog Links.txt" | Select-Object -Last 1
 
     $randomise = $randomiser | Sort-Object{Get-Random}
-    $questions = $randomise[0..11]
+    # $questions = $randomise[0..11]
     $results = foreach($question in $questions){
         "<li>$question</li>"
     }
