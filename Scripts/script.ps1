@@ -81,7 +81,7 @@ function Send-Email {
     $miscLearning = Get-Content "$db\other learning.txt"
     $gym = Get-Content "$db\gym.txt"
     $meals = Get-Content "$db\meal-planner.txt"
-    $randomiser = Get-Content "$db\questions.txt"
+    # $randomiser = Get-Content "$db\questions.txt"
     # $blogLink = Get-content "$db\Brent Ozar Blog Links.txt" | Select-Object -Last 1
 
     $randomise = $randomiser | Sort-Object{Get-Random}
@@ -97,10 +97,10 @@ function Send-Email {
     $lunch = $mealplan[0]
     $dinner = $mealplan[1]
 
-    $learningTopicQuestions = Pull-Questions-On-Learning-Topic
-    $topicQuestions = foreach($result in $learningTopicQuestions){
-        "<li>$result</li>"
-    }
+    # $learningTopicQuestions = Pull-Questions-On-Learning-Topic
+    # $topicQuestions = foreach($result in $learningTopicQuestions){
+    #     "<li>$result</li>"
+    # }
 
     $day = (Get-Date).DayOfWeek
 
@@ -120,10 +120,6 @@ function Send-Email {
     $body = @"
     <h1>Nonna</h1>
     <p>Hi Lou, Remember that I am always watching over you. Have a great day!. Love Nonna</p>
-    <h2>AZ-700 Revision</h2>
-    <ul>
-        $results   
-    </ul>
     <h2>Learning Topic of the Week</h2>
     <ul>
         <li>$miscLearning</li>
@@ -131,10 +127,6 @@ function Send-Email {
     <h2>This Week's Learning Resources:</h2>
         <ul>
             $learningLinks
-        </ul>
-    <h3>AZ-700 Questions related to $miscLearning</h3>
-        <ul>
-            $topicQuestions
         </ul>
     <h2>Today's Gym Session</h2>
     <hr>
