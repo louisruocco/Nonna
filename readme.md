@@ -1,4 +1,6 @@
-# Nonna
+# Nonna v1:
+
+## This repoistory is now inactive due to moving all these scripts and functionality to Azure. Please see Nonna v2 for updates and new features!
 
 A collection of Powershell scripts that act as PA, daily fitness schedule and study helper. An email is sent every morning with this information to help me get started and ready for the day ahead.
 
